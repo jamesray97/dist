@@ -264,6 +264,11 @@ body {
   fill: white;
 }
 
+.selected-circle,
+.selected-circle:hover {
+  fill: #ff0000;
+}
+
 /************************************************* IMAGE STYLING *************************************************/
 
 * {

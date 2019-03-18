@@ -3,13 +3,20 @@
   width: 20%;
 }
 
+.flexbox-slider-2 .flexbox-slide {
+  width: 25%;
+}
+
 /* DO NO MODIFY BELOW THIS*/
 .slides-container {
+  display: none;
   background: rgba(255, 255, 255, 0.3);
   padding: 10px;
   height: 540px;
   position: relative;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .close-button {
