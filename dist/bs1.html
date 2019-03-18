@@ -17,9 +17,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/themes/tooltipster-shadow.css"
     />
-
+    <link rel="stylesheet" type="text/css" href="css/flex-slider.css" />
     <link rel="stylesheet" type="text/css" href="css/stylesheetbs1.css" />
-
     <link
       href="https://fonts.googleapis.com/css?family=Charm"
       rel="stylesheet"
@@ -27,62 +26,41 @@
   </head>
 
   <body>
-    <div id="nelsonStModal" class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div id="nelsonStImgs" class="sidle">
-              <img class="image" src="img/nelson-street/SOKER.jpg" alt />
-              <img class="image" src="img/nelson-street/VOYDER.jpg" alt />
-              <img class="image" src="img/nelson-street/MAFYA.jpg" alt />
-              <img class="image" src="img/nelson-street/nick-walker.jpg" alt />
-              <img
-                class="image"
-                src="img/nelson-street/SOKER-VOYDER-DREAM.jpg"
-                alt
-              />
-            </div>
-          </div>
-        </div>
+    <div id="nelsonStImgs" class="slides-container">
+      <div class="close-button">
+        <span>&times</span>
       </div>
-    </div>
-
-    <div id="leonardLaneModal" class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            modal body here
-            <!-- <div id="leonardLaneImgs" class="sidle">
-              <img class="image" src="img/leonard-lane/KAPES-LEMA.jpg" alt />
-              <img
-                class="image"
-                src="img/nelson-street/SOKER-VOYDER-DREAM.jpg"
-                alt
-              />
-            </div> -->
-          </div>
+      <div class="flexbox-slider flexbox-slider-1">
+        <div class="flexbox-slide">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-4.jpg"
+            alt
+          />
+        </div>
+        <div class="flexbox-slide">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-2.jpg"
+            alt
+          />
+        </div>
+        <div class="flexbox-slide">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-3.jpg"
+            alt
+          />
+        </div>
+        <div class="flexbox-slide">
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-5.jpg"
+            alt
+          />
+        </div>
+        <div class="flexbox-slide">
+          <img
+            class="image"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/694606/eff-1.jpg"
+            alt
+          />
         </div>
       </div>
     </div>
@@ -258,36 +236,6 @@
         </g>
       </svg>
     </div>
-
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-      </div>
-
-      <nav class="menu">
-        <div class="menu-branding"></div>
-
-        <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="/" class="nav-link"> Stokes Croft</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"> Nelson Street</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"> Harbourside</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"> Park Street</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"> Bristol Centre</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
     <!-- DONT WRAP ANCHOR LINK IN BUTTON -->
     <div class="go-back">

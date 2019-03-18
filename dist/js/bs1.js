@@ -3,14 +3,19 @@
 
 $(document).ready(function() {
   $("#Quay-NelsonStreet").click(function() {
-    $("#nelsonStModal").modal("show");
+    $("#nelsonStImgs").show();
     //animaiton complete
   });
 
   $("#LeonardLane").click(function() {
-    console.log($(this));
-    $("#leonardLaneModal").modal("show");
+    $("#leonardLaneImgs").show();
     //animaiton complete
+  });
+
+  $(".close-button").click(function() {
+    $(this)
+      .closest(".slides-container")
+      .hide();
   });
 });
 //********************************************************************** */
@@ -93,5 +98,5 @@ const makeSlider = imageArea => {
   }
 };
 
-makeSlider(document.getElementById("nelsonStImgs"));
-makeSlider(document.getElementById("leonardLaneImgs"));
+// makeSlider(document.getElementById("nelsonStImgs"));
+// makeSlider(document.getElementById("leonardLaneImgs"));
