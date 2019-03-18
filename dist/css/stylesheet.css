@@ -1,0 +1,265 @@
+body {
+  overflow: hidden;
+}
+
+/************************************************* TEXT *************************************************/
+
+/* h1 {
+  position: relative;
+  color: white;
+  font-weight: 30px;
+  font-size: 100px;
+  font-family: "SignPainter";
+  left: 50px;
+} */
+
+h2 {
+  position: relative;
+  color: white;
+  font-family: "SignPainter";
+  left: 50px;
+}
+
+h3 {
+  position: relative;
+  color: white;
+  font-family: "SignPainter";
+  font-size: 30px;
+  left: 50px;
+  top: 590px;
+  z-index: -4;
+}
+
+/************************************************* MAP STYLING *************************************************/
+
+.st0 {
+  fill: #006aba;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+.st1 {
+  fill: #0074ff;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+.st2 {
+  fill: #0084dd;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+svg {
+  height: 50vw;
+  left: 50%;
+  right: 50%;
+  opacity: 0.9;
+}
+path {
+  transition: 0.7s fill;
+}
+path:hover {
+  fill: #7aacff;
+}
+
+.bs3 {
+  fill: #006aba;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+.bs2 {
+  fill: #0074ff;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+.bs1 {
+  fill: #0084dd;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+}
+svg {
+  height: 50vw;
+  left: 50%;
+  right: 50%;
+  opacity: 0.9;
+}
+path {
+  transition: 0.7s fill;
+}
+path:hover {
+  fill: #7aacff;
+}
+
+/************************************************* MAP *************************************************/
+
+#map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+#map path {
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+/************************************************* VIDEO CONTAINER *************************************************/
+
+.video-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+.video-containerFullScreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  /* Center the video */
+  position: absolute;
+  z-index: -5;
+}
+
+/************************************************* PLAY AND PAUSE BUTTON *************************************************/
+
+.button-container {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  display: inline-block;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  top: 90%;
+  left: 85%;
+  transition: color 0.1s ease-in-out;
+  z-index: 1;
+}
+
+.btn {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  border: white 3px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+  vertical-align: middle;
+  line-height: 35px;
+  font-size: 300%;
+  font-family: "SignPainter";
+  text-align: center;
+  color: white;
+}
+.btn:hover {
+  border: lightblue 3.5px solid;
+  color: lightblue;
+}
+
+.play-video {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  border: white 3px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+  vertical-align: middle;
+  line-height: 35px;
+  font-size: 300%;
+  font-family: "SignPainter";
+  text-align: center;
+  color: white;
+}
+.play-video:hover {
+  border: lightblue 3.5px solid;
+  color: lightblue;
+}
+
+/* .btn .bar {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 3px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: white;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+.btn.pause .bar-1 {
+  transform: translateX(13.5px) translateY(0px) rotate(0deg);
+}
+.btn.pause .bar-2 {
+  transform: translateX(24px) translateY(0px) rotate(0deg);
+}
+.btn.play .bar-1 {
+  transform: translateX(20px) translateY(-5px) rotate(-55deg);
+}
+.btn.play .bar-2 {
+  transform: translateX(20px) translateY(5px) rotate(-125deg);
+} */
+
+/************************************************* LOADING SCREEN *************************************************/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 1s;
+}
+
+.preloader:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  transition: 1s;
+}
+
+.preloader.complete:before {
+  left: -50%;
+}
+
+.preloader:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  transition: 1s;
+}
+
+.preloader.complete:after {
+  right: -50%;
+}
