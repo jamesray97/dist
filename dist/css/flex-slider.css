@@ -12,7 +12,7 @@
   display: none;
   background: rgba(255, 255, 255, 0.3);
   padding: 10px;
-  height: 540px;
+  height: calc(100vh - 100px);
   position: relative;
   width: 100%;
   max-width: 900px;
@@ -49,6 +49,7 @@
   overflow: hidden;
   cursor: pointer;
   visibility: visible;
+  background: #000;
 }
 .flexbox-slider .flexbox-slide img {
   position: absolute;
@@ -61,8 +62,17 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
+  transition: all 1s ease-in-out;
+
+  opacity: 0.9;
+  background-blend-mode: darken;
 }
-.flexbox-slider:hover .flexbox-slide:hover {
-  flex-shrink: 0;
-  width: 80%;
+.flexbox-slider:hover .flexbox-slide:hover img {
+  transform: scale(1.2, 1.2) translate(-50%, -50%);
+  opacity: 1;
+}
+
+.gallery-open .map svg {
+  width: 145%;
+  margin-left: -100px;
 }

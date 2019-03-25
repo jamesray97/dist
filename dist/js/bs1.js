@@ -16,6 +16,7 @@ $(document).ready(function() {
     //Show the target image container
     $("#nelsonStImgs").fadeIn();
     //animaiton complete
+    $(".page-container").addClass("gallery-open");
   });
 
   $("#LeonardLane").click(function() {
@@ -32,15 +33,53 @@ $(document).ready(function() {
     //Show the target image container
     $("#leonardLaneImgs").fadeIn();
     //animaiton complete
+
+    $(".page-container").addClass("gallery-open");
   });
 
   $(".close-button").click(function() {
+    $(".page-container").removeClass("gallery-open");
     $(this)
       .closest(".slides-container")
       .fadeToggle();
     $(".circles").each(function() {
       $(this).removeClass("selected-circle");
     });
+  });
+
+  $(".flexbox-slide").on("click", function() {
+    var clickedImage = $(this).children("img")[0];
+    console.log(clickedImage);
+    var imgSrc = clickedImage.src;
+    console.log("you clicked on ", imgSrc);
+    $(".big-image img")[0].src = imgSrc;
+
+    var title = $(clickedImage).data("slide-title");
+    var subTitle = $(clickedImage).data("slide-subtitle");
+    if (title || subTitle) {
+      if (title) {
+        $(".big-image .big-image-caption h2").text(title);
+        $(".big-image .big-image-caption h2").show();
+      } else {
+        $(".big-image .big-image-caption h2").hide();
+      }
+      if (subTitle) {
+        $(".big-image .big-image-caption p").text(subTitle);
+        $(".big-image .big-image-caption p").show();
+      } else {
+        $(".big-image .big-image-caption p").hide();
+      }
+      $(".big-image .big-image-caption").show();
+    } else {
+      $(".big-image .big-image-caption").hide();
+    }
+    $(".big-image").fadeIn("slow");
+  });
+
+  $(".big-image .close-big-image").on("click", function() {
+    $(this)
+      .closest(".big-image")
+      .fadeOut("slow");
   });
 });
 //********************************************************************** */
