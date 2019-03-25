@@ -172,8 +172,8 @@ body {
 /************************************************* GO BACK BUTTON *************************************************/
 .go-back {
   position: absolute;
-  top: 90%;
-  left: 85%;
+  bottom: 10px;
+  left: calc(50vw - 80px);
   z-index: 2;
 }
 
@@ -187,7 +187,7 @@ body {
   transition: 800ms ease all;
 }
 
-button {
+.go-back button {
   background: #484c54;
   color: #fff;
   border: none;
@@ -200,12 +200,12 @@ button {
   transition: 800ms ease all;
   outline: none;
 }
-button:hover {
+.go-back button:hover {
   background: #fff;
   color: black;
 }
-button:before,
-button:after {
+.go-back button:before,
+.go-back button:after {
   content: "";
   position: absolute;
   top: 0;
@@ -215,14 +215,14 @@ button:after {
   background: black;
   transition: 400ms ease all;
 }
-button:after {
+.go-back button:after {
   right: inherit;
   top: inherit;
   left: 0;
   bottom: 0;
 }
-button:hover:before,
-button:hover:after {
+.go-back button:hover:before,
+.go-back button:hover:after {
   width: 100%;
   transition: 800ms ease all;
 }
@@ -264,6 +264,11 @@ button:hover:after {
   fill: white;
 }
 
+.selected-circle,
+.selected-circle:hover {
+  fill: #ff0000;
+}
+
 /************************************************* IMAGE STYLING *************************************************/
 
 * {
@@ -287,46 +292,101 @@ button:hover:after {
   color: white;
 }
 
-#sidle {
-  display: none;
-}
-
-#sidle:hover {
-  background: white;
-}
-
-#sidle.slideAnimation {
+.sidle.slideAnimation {
   position: relative;
   width: 50%;
 }
-#sidle.slideAnimation img {
+.sidle.slideAnimation img {
   position: absolute;
   width: 100%;
 }
-#sidle.slideAnimation img:hover {
+.sidle.slideAnimation img:hover {
   cursor: pointer;
 }
-#sidle.slideAnimation .full:hover {
+.sidle.slideAnimation .full:hover {
   cursor: default;
 }
-#sidle:not(.slideAnimation) {
+.sidle:not(.slideAnimation) {
   width: 98%;
   margin: 0 auto;
 }
-#sidle:not(.slideAnimation) img {
+.sidle:not(.slideAnimation) img {
   width: 40%;
   display: inline-block;
   padding: 5px;
 }
+
+.page-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.map {
+  flex: 1;
+}
+
+.slides-container {
+  width: 60%;
+}
+
+.big-image {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #232323;
+  border: 10px solid;
+  margin: 10px;
+  z-index: 100;
+}
+
+.big-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: black;
+}
+
+.close-big-image {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #dadada;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.big-image-caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  right: 0;
+  left: 0;
+  padding: 12px 24px;
+  font-weight: 300;
+}
+
+.big-image-caption h2 {
+  font-weight: normal;
+}
+
 @media all and (max-width: 600px) {
   body {
     margin: 0 auto;
   }
-  #sidle.slideAnimation {
+  .sidle.slideAnimation {
     width: 100%;
     display: none;
   }
-  #sidle.slideAnimation img {
+  .sidle.slideAnimation img {
     position: relative;
     width: 100% !important;
     display: inline-block;
@@ -339,7 +399,7 @@ button:hover:after {
     margin: 0 auto;
   }
 
-  #sidle {
+  .sidle {
     position: flex;
     display: inline-block;
     padding: 5px;
