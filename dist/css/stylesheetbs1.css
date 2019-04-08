@@ -391,18 +391,18 @@ body {
     width: 100% !important;
     display: inline-block;
     -webkit-clip-path: none !important;
+    clip-path: none !important;
   }
 }
 
-/* @media all and (max-width: 450px) {
-  body {
-    margin: 0 auto;
-  }
+.title-text {
+  color: #f4f4f4;
+  font-weight: 300;
+  text-align: center;
+}
 
-  .sidle {
-    position: flex;
-    display: inline-block;
-    padding: 5px;
+@media only screen and (max-width: 900px) {
+  .slides-container {
+    width: 100%;
   }
-
-} */
+}
