@@ -2,6 +2,12 @@
 //SVG ON CLICK
 
 $(document).ready(function() {
+  $(window).on("load", function() {
+    $(".preloader").fadeOut("slow", function() {
+      $(".preloader-top").addClass("slide-top");
+    });
+  });
+
   $("#Quay-NelsonStreet").click(function() {
     //Hide other image containers (if open)
     $(".slides-container").each(function() {
