@@ -12,20 +12,22 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Charm"
+      href="https://fonts.googleapis.com/css?family=Archivo+Black"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=BenchNine"
       rel="stylesheet"
     />
   </head>
   <body>
     <!-- <div class="preloader"></div> -->
 
-    <!-- <h1>Bristol Graffiti</h1>
-        <h2>
-          Explore bristol graffiti by selecting different areas on the map
-        </h2>
-        <h3>
-          Press the play button to preview video and click the map to explore.
-        </h3> -->
+    <h1 id="text1">Bristol Graffiti</h1>
+    <h2 id="text2">
+      Explore bristol graffiti by selecting different areas on the map
+    </h2>
 
     <div id="map" class="bristol">
       <?xml version="1.0" encoding="utf-8"?>
@@ -36,12 +38,11 @@
         x="0px"
         y="0px"
         viewBox="0 0 1366 768"
-        style="enable-background:new 0 0 1366 768;"
         xml:space="preserve"
       >
         <g id="BS3"></g>
 
-        <a xlink:href="/bs3.html">
+        <a xlink:href="./bs3.html">
           <path
             class="st0"
             d="M433,386.3v5.9l1.5,8.8l4.4,8.8l13.2,11.8l10.3,5.9l17.7,4.4l29.4-1.5l31.6-8.1l33.8-4.4h35.3l44.1,10.3
@@ -60,7 +61,7 @@
         </a>
 
         <g id="BS2"></g>
-        <a xlink:href="/bs2.html">
+        <a xlink:href="./bs2.html">
           <path
             class="st1"
             d="M884.8,71.4l11.8-11.8l11.8-16.2l-8.8-5.9l-20.6,2.9l-14,2.2l-11.8-23.5l-23.5,7.4l-7.4,11.8l-1.5,7.4
@@ -90,7 +91,7 @@
         </a>
 
         <g id="BS1"></g>
-        <a xlink:href="/bs1.html">
+        <a xlink:href="./bs1.html">
           <path
             class="st2"
             d="M747.9,233.2v2.9h-1.5l-1.5-1.5l-7.4-4.4l-2.9,1.5l-5.9-2.9l-3.7-0.7l2.9-1.5l2.9-7.4v-1.5l0.7-2.2l-2.2-0.7
@@ -128,9 +129,14 @@
       </div>
     </div>
 
+    <div id="mute" class="btn2"></div>
+
     <div class="video-container">
-      <video id="vid" width="1280" height="720" autoplay muted loop>
-        <source src="videos/background video.mp4" type="video/mp4" />
+      <video id="vid" width="1280" height="720" muted autoplay loop>
+        <source
+          src="videos/background video with audio 1280x720.mp4"
+          type="video/mp4"
+        />
       </video>
     </div>
 
